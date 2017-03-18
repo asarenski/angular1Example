@@ -2,6 +2,7 @@
 
 // index.html page to dist folder
 import '!!file-loader?name=[name].[ext]!../favicon.ico';
+import '!!file-loader?name=[name].[ext]!../generated.json';
 
 // vendor files
 import "./index.vendor";

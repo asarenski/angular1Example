@@ -10,7 +10,8 @@ import coreModule from './core/core.module';
 import indexComponents from './index.components';
 import indexRoutes from './index.routes';
 import mainModule from './pages/main/main.module';
-
+import usersModule from './pages/users/users.module';
+import aboutModule from './pages/about/about.module';
 
 const App = angular.module(
   "myNgApp", [
@@ -28,7 +29,9 @@ const App = angular.module(
     indexRoutes.name,
 
     // pages
-    mainModule.name
+    mainModule.name,
+    usersModule.name,
+    aboutModule.name
 
   ]
 );
