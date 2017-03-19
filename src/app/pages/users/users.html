@@ -1,4 +1,11 @@
 <div class="container">
-    <h1>This is the main users thing.</h1>
-    <p>{{usersCtrl.someProp}}</p>
+    <ul>
+        <li ng-repeat="user in usersCtrl.users track by $index">
+            <div ng-click="usersCtrl.goToUserDetail(user.guid)">
+                <div class="row">{{user.name}} {{user.company}}</div>
+                <div class="row">{{user.email}}</div>
+            </div>
+            <br>
+        </li>
+    </ul>
 </div>

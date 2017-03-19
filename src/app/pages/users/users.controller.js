@@ -1,16 +1,21 @@
 'use strict';
 
-import  _ from 'lodash/core';
-import moment from 'moment';
-
-function UsersController($log, dataService) {
+function UsersController($log, $state, dataService) {
   'ngInject';
 
-  $log.debug('Hello from UsersController controller!');
+  let vm = this;
 
-  this.someProp = "some users property";
+  vm.users = [];
 
-  dataService.init();
+  dataService.getUsers().then((data) => {
+    vm.users = data;
+  }).catch((fault) => {
+    $log.error("error getting the user data", fault);
+  });
+
+  vm.goToUserDetail = (guid) => {
+    $state.go("userDetail", {guid: guid});
+  }
 }
 
 export default UsersController;

@@ -12,6 +12,7 @@ import indexRoutes from './index.routes';
 import mainModule from './pages/main/main.module';
 import usersModule from './pages/users/users.module';
 import aboutModule from './pages/about/about.module';
+import userDetailModule from './pages/userDetail/userDetail.module';
 
 const App = angular.module(
   "myNgApp", [
@@ -31,7 +32,8 @@ const App = angular.module(
     // pages
     mainModule.name,
     usersModule.name,
-    aboutModule.name
+    aboutModule.name,
+    userDetailModule.name
 
   ]
 );
