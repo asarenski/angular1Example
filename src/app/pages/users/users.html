@@ -1,4 +1,5 @@
-<div class="container">
+<div id="users" class="container">
+    <h1>Users</h1>
     <ul>
         <li ng-repeat="user in usersCtrl.users track by $index">
             <div ng-click="usersCtrl.goToUserDetail(user.guid)">

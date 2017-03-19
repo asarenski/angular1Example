@@ -1,3 +1,16 @@
-<div class="container">
-    <p>This is a user detail... guid {{userDetailCtrl.user.guid}}</p>
+<div id="userDetail" class="container">
+    <div>
+        <h1>{{userDetailCtrl.user.name}}</h1>
+        <p>Company: {{userDetailCtrl.user.company}}</p>
+        <p>Email: {{userDetailCtrl.user.email}}</p>
+        <p>Phone: {{userDetailCtrl.user.phone}}</p>
+        <p>Address: {{userDetailCtrl.user.address}}</p>
+    </div>
+
+    <br>
+
+    <div>
+        <h3>About</h3>
+        <p>{{userDetailCtrl.user.about}}</p>
+    </div>
 </div>
