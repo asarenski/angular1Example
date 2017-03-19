@@ -8,8 +8,10 @@
         </div>
     </div>
     <ul>
-        <li class="card" ng-repeat="user in usersCtrl.users | orderBy : usersCtrl.orderByField : usersCtrl.reverseSort track by $index ">
-            <div class="row" ng-click="usersCtrl.goToUserDetail(user.guid)">
+        <li class="card"
+            ng-click="usersCtrl.goToUserDetail(user.guid)"
+            ng-repeat="user in usersCtrl.users | orderBy : usersCtrl.orderByField : usersCtrl.reverseSort track by $index ">
+            <div class="row">
                 <div class="col-md-6">
                     <div class="row">{{user.name}} {{user.company}}</div>
                     <div class="row">{{user.email}}</div>
