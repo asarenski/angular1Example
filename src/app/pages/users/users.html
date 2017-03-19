@@ -1,10 +1,22 @@
 <div id="users" class="container">
-    <h1>Users</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Users</h1>
+        </div>
+        <div class="col-md-6">
+            <a href="" ng-click="usersCtrl.sortByTimestamp()" class="sorting" data-ng-bind-html="usersCtrl.timestampSortingString()"></a>
+        </div>
+    </div>
     <ul>
-        <li class="card" ng-repeat="user in usersCtrl.users track by $index">
-            <div ng-click="usersCtrl.goToUserDetail(user.guid)">
-                <div class="row">{{user.name}} {{user.company}}</div>
-                <div class="row">{{user.email}}</div>
+        <li class="card" ng-repeat="user in usersCtrl.users | orderBy : usersCtrl.orderByField : usersCtrl.reverseSort track by $index ">
+            <div class="row" ng-click="usersCtrl.goToUserDetail(user.guid)">
+                <div class="col-md-6">
+                    <div class="row">{{user.name}} {{user.company}}</div>
+                    <div class="row">{{user.email}}</div>
+                </div>
+                <div class="col-md-6">
+                    <div>Registered: {{user.registered | date: 'medium'}}</div>
+                </div>
             </div>
         </li>
     </ul>
