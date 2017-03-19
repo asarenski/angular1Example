@@ -1,12 +1,11 @@
 <div id="users" class="container">
     <h1>Users</h1>
     <ul>
-        <li ng-repeat="user in usersCtrl.users track by $index">
+        <li class="card" ng-repeat="user in usersCtrl.users track by $index">
             <div ng-click="usersCtrl.goToUserDetail(user.guid)">
                 <div class="row">{{user.name}} {{user.company}}</div>
                 <div class="row">{{user.email}}</div>
             </div>
-            <br>
         </li>
     </ul>
 </div>
