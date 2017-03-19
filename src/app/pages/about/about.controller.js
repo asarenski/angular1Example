@@ -5,8 +5,6 @@ import moment from 'moment';
 
 function AboutController($log) {
   'ngInject';
-
-  $log.debug('Hello from about controller!');
 }
 
 export default AboutController;

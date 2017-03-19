@@ -16,7 +16,6 @@ function headerComponent($log) {
   return directive;
 
   function HeaderController () {
-	  $log.debug('Hello from the header controller!');
     this.routes = [
       {
         name: 'HOME',
