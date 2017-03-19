@@ -4,7 +4,7 @@ export default function(app) {
     app
       .factory('dataService', dataService);
 
-    function dataService($log, httpService) {
+    function dataService($log) {
       'ngInject';
 
       let service = {
@@ -15,7 +15,6 @@ export default function(app) {
 
       function init() {
         $log.debug("heyyyyyyyyyyyyyyy World from dataservice");
-        httpService.init();
       }
     }
 }

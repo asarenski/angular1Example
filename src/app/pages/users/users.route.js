@@ -11,7 +11,7 @@ function routeConfig($stateProvider) {
       url: '/users',
       templateUrl: usersTpl,
       controller: usersController,
-      controllerAs: 'usersController'
+      controllerAs: 'usersCtrl'
     });
 
 }

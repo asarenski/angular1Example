@@ -3,7 +3,7 @@
 import  _ from 'lodash/core';
 import moment from 'moment';
 
-function UsersController($log, dataService, httpService) {
+function UsersController($log, dataService) {
   'ngInject';
 
   $log.debug('Hello from UsersController controller!');
