@@ -23,4 +23,13 @@
         cursor: pointer;
         transition: ease-in-out 0.25s;
     }
+
+    input {
+        font-size: 18px;
+        position: relative;
+        top: 25px;
+        border:none;
+        border-bottom:1px solid #999;
+        background-color: #f5f5f5;
+    }
 }

@@ -1,7 +1,10 @@
 <div id="users" class="container">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-2">
             <h1>Users</h1>
+        </div>
+        <div class="col-md-4">
+            <input type="text" placeholder="Search" ng-model="usersCtrl.searchExpression"/>
         </div>
         <div class="col-md-6">
             <a href="" ng-click="usersCtrl.sortByTimestamp()" class="sorting" data-ng-bind-html="usersCtrl.timestampSortingString()"></a>
@@ -10,7 +13,7 @@
     <ul>
         <li class="card"
             ng-click="usersCtrl.goToUserDetail(user.guid)"
-            ng-repeat="user in usersCtrl.users | orderBy : usersCtrl.orderByField : usersCtrl.reverseSort track by $index ">
+            ng-repeat="user in usersCtrl.users | orderBy : usersCtrl.orderByField : usersCtrl.reverseSort | filter : usersCtrl.searchExpression track by $index">
             <div class="row">
                 <div class="col-md-6">
                     <div class="row">{{user.name}} {{user.company}}</div>
